@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "bittergourd",
+  "version": "1.0",
+  "description": "Adds random stuff to every website that you visit. Highly powerful extension. Use this power carefully, son.",
+  "icons": {
+    "16": "./images/bittergourd16.png",
+    "48": "./images/bittergourd48.png",
+    "128": "./images/bittergourd128.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "./images/bittergourd16.png",
+      "48": "./images/bittergourd48.png",
+      "128": "./images/bittergourd128.png"
+    }
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
